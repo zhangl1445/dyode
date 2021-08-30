@@ -44,7 +44,7 @@ function mobileMenu() {
         $('html').addClass('lock-screen');
     })
     
-    $('.off-canvas-top [data-close]').on('click', (event) => {
+    $('.off-canvas [data-close]').on('click', (event) => {
         $('html').removeClass('lock-screen');
     })
 }

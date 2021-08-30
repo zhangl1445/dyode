@@ -1,0 +1,37 @@
+.social {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+    @include breakpoint('large') {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .instagram-container {
+        display: flex;
+        .cell {
+            flex: 1;
+            padding: 10px;
+           
+            img {
+                width: 100%;
+            }
+            
+            &:nth-child(4n) {
+                display: none;
+            }
+            
+            &:nth-child(5n) {
+                display: none;
+            }
+            
+            @include breakpoint('medium') {
+                &:nth-child(4n),
+                &:nth-child(5n) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -19,6 +19,29 @@
     background: $black !important;
 }
 
+.button-green {
+    text-transform: uppercase;
+    color: $white !important;
+    background: $green !important;
+}
+
+.button-green-small {
+    text-transform: uppercase;
+    color: $white !important;
+    background: $black !important;
+    
+    @include breakpoint('medium') {
+        background: $green;
+    }
+}
+
+.button-trans {
+    background-color: transparent !important;
+    border: 1px solid $white !important;
+    color: $white !important;
+    text-transform: uppercase !important;
+}
+
 
 html.lock-screen {
     overflow: hidden;
@@ -26,4 +49,32 @@ html.lock-screen {
 
 .body {
     max-width: 100% !important;
+}
+
+.heading {
+    text-align: center;
+    font-family: $heading-font-family;
+    text-transform: capitalize;
+    font-size: 26px;
+    margin-bottom: 30px;
+    
+    @include breakpoint('medium') {
+        font-size: 55px;
+        margin-bottom: 35px;
+    }
+    @include breakpoint('large') {
+        font-size: 60px;
+        margin-bottom: 40px;
+    }
+}
+
+.accordion-menu {
+    a {
+        color: $white;
+        
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
 }
