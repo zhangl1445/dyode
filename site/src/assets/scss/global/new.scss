@@ -1,0 +1,139 @@
+.new-arrivals {
+    position: relative;
+    h2 {
+        text-align: center;
+        font-family: $heading-font-family;
+        text-transform: capitalize;
+        font-size: 26px;
+        margin-bottom: 30px;
+        
+        @include breakpoint('medium') {
+            font-size: 55px;
+            margin-bottom: 35px;
+        }
+        
+        @include breakpoint('large') {
+            font-size: 60px;
+            margin-bottom: 40px;
+        }
+    }
+    
+    .cell {
+        .card {
+            border: none;
+            
+            .card-section {
+                text-align: center;
+                
+                h4 {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                    
+                    @include breakpoint('medium') {
+                        font-size: 22px;
+                    }
+                }
+                
+                p {
+                    margin-bottom: 5px;
+                }
+                
+                p.des {
+                    font-weight: 300;
+                    font-size: 12px;
+                    @include breakpoint('medium') {
+                        font-size: 16px;
+                    }
+                }
+                
+                p.price {
+                    color: $green;
+                    font-family: $heading-font-family;
+                    font-size: 18px;
+                    line-height: 18px;
+                    @include breakpoint('medium') {
+                        font-size: 26px;
+                        line-height: 26px;
+                    }
+                    font-style: italic;
+                    font-weight: normal;
+                    
+                    span {
+                        font-size: 22px;
+                        @include breakpoint('medium') {
+                            font-size: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    [data-action="stop"],
+    [data-action="start"] {
+        display: none;
+    }
+    
+    .tns-nav {
+        display: none;
+    }
+    
+    .tns-controls {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        left: 0;    
+        background: transparent;
+        width: 100%;    
+        top: 50%;
+        transform: translatey(-50%);
+        display: flex;
+        align-items: center;    
+        justify-content: space-between;
+        z-index: 999;
+        
+        &:focus {
+            outline: none;
+        }
+        
+        button {
+            width: 20px;
+            height: 20px;
+                
+            @include breakpoint('medium') {
+                width: 30px;
+                height: 30px;
+            }
+            
+            @include breakpoint('large') {
+                width: 50px;
+                height: 50px;
+            }
+            font-size: 0;
+            position: absolute;
+            
+            &[data-controls="next"] {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-arrow-right' viewBox='0 0 18 32'%3E%3Cpath d='M16.918 15.122l-14.801-14.76c-0.485-0.483-1.27-0.482-1.754 0.003s-0.482 1.27 0.003 1.754l13.92 13.882-13.92 13.881c-0.485 0.484-0.486 1.269-0.003 1.754 0.243 0.243 0.561 0.365 0.879 0.365s0.634-0.121 0.876-0.362l14.801-14.76c0.234-0.232 0.365-0.549 0.365-0.878s-0.131-0.645-0.365-0.878z'%3E%3C/path%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                right: 0;
+                
+                @include breakpoint('large') {
+                    right: 10px;
+                }
+            }
+            
+            &[data-controls="prev"] {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' id='icon-arrow-left' viewBox='0 0 18 32'%3E%3Cpath d='M0.606 16.878l14.801 14.76c0.485 0.483 1.27 0.483 1.754-0.002s0.483-1.271-0.002-1.754l-13.92-13.882 13.92-13.881c0.485-0.484 0.486-1.269 0.003-1.754-0.243-0.243-0.561-0.365-0.879-0.365s-0.634 0.121-0.876 0.362l-14.801 14.76c-0.234 0.232-0.365 0.549-0.365 0.878s0.131 0.645 0.365 0.878z'%3E%3C/path%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                @include breakpoint('medium') {
+                    left: 0;
+                }
+                
+                @include breakpoint('large') {
+                    left: 30px;
+                }
+            }
+        }
+    }
+}

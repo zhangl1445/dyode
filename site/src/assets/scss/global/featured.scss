@@ -1,0 +1,55 @@
+.featured-category {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    @include breakpoint('medium') {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    .card {
+        position: relative;
+    }
+    
+    .card-section {
+        text-align: center;
+        background: $green;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 10px;
+        
+        @include breakpoint('medium') {
+            padding: 18px 15px;
+        }
+        
+        h3 {
+            color: $white;
+            font-family: $heading-font-family;
+            font-size: 20px;
+            
+            @include breakpoint('medium') {
+                font-size: 30px;
+                
+            } 
+            
+            @include breakpoint('large') {
+                font-size: 40px;
+            } 
+        }
+    }
+    
+    .cell {
+        @media (max-width: 601px) {
+            flex: 1 !important;
+        }
+        &:last-child {
+            @media (max-width: 601px) {
+                flex: 0 0 auto !important;
+                width: 100% !important;
+                padding-right: 1.25rem;
+            }
+        }
+    }
+}

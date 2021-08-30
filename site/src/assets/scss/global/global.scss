@@ -1,0 +1,29 @@
+.grid-custom-padding-x {
+    padding-left: rem-calc(15);
+    padding-right: rem-calc(15);
+    
+    @include breakpoint('medium') {
+        padding-left: rem-calc(25);
+        padding-right: rem-calc(25px);
+    }
+    
+    @include breakpoint('large') {
+        padding-left: rem-calc(33);
+        padding-right: rem-calc(33);
+    }
+}
+
+.button-primary {
+    text-transform: uppercase;
+    color: $white !important;
+    background: $black !important;
+}
+
+
+html.lock-screen {
+    overflow: hidden;
+}
+
+.body {
+    max-width: 100% !important;
+}
